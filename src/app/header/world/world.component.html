@@ -1,0 +1,32 @@
+<p>world works! this table is coming from world</p>
+<div>
+    <button (click)="userDetail()">Click</button>
+  </div>
+  <div>
+    <a type="button" class="btn btn-danger" routerLink="hello">Hello</a>
+  </div>
+
+  <div class="container" *ngIf="showTable">
+    <h2>User Table</h2>          
+    <table class="table">
+      <thead>
+        <tr>
+        <th>userId</th>
+          <th>Id</th>
+          <th>title</th>
+          <th>body</th>
+         
+        </tr>
+      </thead>
+      <tbody *ngFor="let userRom of users">
+        <tr *ngIf="userRom.userId===1">
+                <td>{{userRom.userId}}</td>
+                <td>{{userRom.id}}</td>
+                <td>{{userRom.title}}</td>
+                <td>{{userRom.body}}</td>
+          
+         
+        </tr>
+      </tbody>
+    </table>
+  </div>

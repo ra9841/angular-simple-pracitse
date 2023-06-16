@@ -1,0 +1,35 @@
+<p>header works! This table is coming from header</p>
+
+
+  <div>
+    <button (click)="userDetail()">Click</button>
+  </div>
+  <div>
+    <a type="button" class="btn btn-danger" routerLink="world">Next</a>
+  </div>
+
+  <div class="container" *ngIf="showTable">
+    <h2>User Table</h2>          
+    <table class="table">
+      <thead>
+        <tr>
+        <th>userId</th>
+          <th>Id</th>
+          <th>title</th>
+          <th>body</th>
+         
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let userOk of userOk">
+          <td>{{userOk.userId}}</td>
+          <td>{{userOk.id}}</td>
+          <td>{{userOk.title}}</td>
+          <td>{{userOk.body}}</td>
+         
+        </tr>
+      </tbody>
+    </table>
+  </div>
+ <!-- <app-world></app-world>-->
+  <router-outlet></router-outlet>
